@@ -1,42 +1,22 @@
 import React from 'react';
 // import ConversationList from '../ConversationList';
-import Chatlist from '../chatlist/ChatList'
+import ChatList from './chatlist/ChatList'
 import MessageList from '../MessageList';
-import ChatDetails from '../chatdetails/ChatDetails'
+import ChatDetails from './chatdetails/ChatDetails'
 import './Messenger.css';
 
 export default function Messenger(props) {
     return (
       <div className="messenger">
-        {/* <Toolbar
-          title="Messenger"
-          leftItems={[
-            <ToolbarButton key="cog" icon="ion-ios-cog" />
-          ]}
-          rightItems={[
-            <ToolbarButton key="add" icon="ion-ios-add-circle-outline" />
-          ]}
-        /> */}
-
-        {/* <Toolbar
-          title="Conversation Title"
-          rightItems={[
-            <ToolbarButton key="info" icon="ion-ios-information-circle-outline" />,
-            <ToolbarButton key="video" icon="ion-ios-videocam" />,
-            <ToolbarButton key="phone" icon="ion-ios-call" />
-          ]}
-        /> */}
-
-        <div className="scrollable sidebar">
+        <div className="scrollable sidebar" style = {{width:'25%'}}>
           {/* <ConversationList /> */}
-          <Chatlist/>
+          <ChatList/>
         </div>
-
-        <div className="scrollable content">
+        <div className="scrollable content" style = {{width:'50%'}}>
           <MessageList />
         </div>
-        <div>
-          <ChatDetails/>
+        <div style = {{width:'25%'}}>
+           <ChatDetails/>
         </div>
       </div>
     );

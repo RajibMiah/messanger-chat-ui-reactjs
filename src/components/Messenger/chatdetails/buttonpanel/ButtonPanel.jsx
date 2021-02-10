@@ -1,6 +1,6 @@
 import { Grid, makeStyles } from '@material-ui/core'
 import React from 'react'
-import Controls from '../../../controls/controls'
+import Controls from '../../../../controls/controls'
 
 const useStyles = makeStyles(theme=>({
   root:{
